@@ -35,6 +35,7 @@ function setupWebGL() {
 
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
     gl.enable(gl.BLEND);
+    gl.disable(gl.DEPTH_TEST);
 }
 
 function connectVariablesToGLSL() {
