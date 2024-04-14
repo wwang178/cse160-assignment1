@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+    <button type="button" id="green">Green</button>
+    <button type="button" id="red">Red</button>
+
+    <button type="button" id="clearButton">Clear</button>
+
+    <p>
+    <button type="button" id="pointButton">Point</button>
+    <button type="button" id="triButton">Triangle</button>
+    <button type="button" id="circleButton">Circle</button>
+
+    
+    <p>
+    Red <input type="range" min="0" max="100" value="100" class="slider" id="redSlide">
+    <p>
+    Green <input type="range" min="0" max="100" value="100" class="slider" id="greenSlide">
+    <p>
+    Blue <input type="range" min="0" max="100" value="100" class="slider" id="blueSlide">
+    <p>
+    Alpha <input type="range" min="0" max="100" value="100" class="slider" id="alphaSlide">
+    <p>
+    Size <input type="range" min="5" max="40" value="0" class="slider" id="sizeSlide">
+    <p>
+    Circle Segments <input type="range" min="5" max="40" value="0" class="slider" id="circleSegmentsSlide">
+
+    <p>
+    <button type="button" id="undoButton">Undo</button>
+
+    <p>
+    <button type="button" id="drawPictureButton">DrawPicture</button>
+
+    <p>Extra features</p>
+    <p>-Hold shift to display a preview of the shape you are about to place. The preview disappears when the shift key is no longer pressed.
+        <br>Note: after clicking on UI (such as a button or slider), you have to click on a blank area outside of the canvas for the shape preview to work again (I think some weird interaction with events and UI)</p>
+    <p>-Added an Undo button that removes the last shape that was placed</p>
+    <p>-Added a slider for alpha to allow transparent paint</p>
+    <p>-Added a function to scale and convert a 2D coordinate system into coordinates for the WebGL canvas</p>
+    <p>-The points in the picture (part 12) are added to the point list (so they can be undone using the Undo button too)</p>
+
+    <p>
+    <img src="../Picture.jpg">
+    <img src="../PictureNumbered.jpg">
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="ColoredPoints.js"></script>
+  </body>
+</html>
